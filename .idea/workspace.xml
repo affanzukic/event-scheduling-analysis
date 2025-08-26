@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d760533-ed4b-410f-8c7d-ef9ba6930a36" name="Changes" comment="fix: redis/bullmq connection options" />
+    <list default="true" id="6d760533-ed4b-410f-8c7d-ef9ba6930a36" name="Changes" comment="fix: gitignore">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -116,7 +118,7 @@
       <workItem from="1756213024453" duration="781000" />
       <workItem from="1756214135994" duration="147000" />
       <workItem from="1756214392900" duration="29000" />
-      <workItem from="1756214429912" duration="6946000" />
+      <workItem from="1756214429912" duration="7259000" />
     </task>
     <task id="LOCAL-00001" summary="feat: initial commit">
       <option name="closed" value="true" />
@@ -222,7 +224,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756229270692</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fix: gitignore">
+      <option name="closed" value="true" />
+      <created>1756229314858</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1756229314858</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,6 +249,7 @@
     <MESSAGE value="fixqdasd: Redis/BullMQ connection options" />
     <MESSAGE value="fix: Redis/BullMQ connection options" />
     <MESSAGE value="fix: redis/bullmq connection options" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: redis/bullmq connection options" />
+    <MESSAGE value="fix: gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: gitignore" />
   </component>
 </project>
