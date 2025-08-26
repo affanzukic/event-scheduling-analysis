@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d760533-ed4b-410f-8c7d-ef9ba6930a36" name="Changes" comment="fix: Redis/BullMQ connection options">
-      <change afterPath="$PROJECT_DIR$/.husky/pre-commit" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/api/analyze/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/api/analyze/route.ts" afterDir="false" />
-    </list>
+    <list default="true" id="6d760533-ed4b-410f-8c7d-ef9ba6930a36" name="Changes" comment="fix: redis/bullmq connection options" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -119,7 +116,7 @@
       <workItem from="1756213024453" duration="781000" />
       <workItem from="1756214135994" duration="147000" />
       <workItem from="1756214392900" duration="29000" />
-      <workItem from="1756214429912" duration="6633000" />
+      <workItem from="1756214429912" duration="6946000" />
     </task>
     <task id="LOCAL-00001" summary="feat: initial commit">
       <option name="closed" value="true" />
@@ -201,7 +198,31 @@
       <option name="project" value="LOCAL" />
       <updated>1756228925535</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="fix: Redis/BullMQ connection options">
+      <option name="closed" value="true" />
+      <created>1756228973552</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1756228973552</updated>
+    </task>
+    <task id="LOCAL-00012" summary="fix: Redis/BullMQ connection options">
+      <option name="closed" value="true" />
+      <created>1756228997041</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1756228997041</updated>
+    </task>
+    <task id="LOCAL-00013" summary="fix: redis/bullmq connection options">
+      <option name="closed" value="true" />
+      <created>1756229270692</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1756229270692</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,7 +236,9 @@
     <MESSAGE value="feat: add BullMQ job and worker" />
     <MESSAGE value="feat: implement pdf stream generating" />
     <MESSAGE value="feat: temporary README.md" />
+    <MESSAGE value="fixqdasd: Redis/BullMQ connection options" />
     <MESSAGE value="fix: Redis/BullMQ connection options" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: Redis/BullMQ connection options" />
+    <MESSAGE value="fix: redis/bullmq connection options" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: redis/bullmq connection options" />
   </component>
 </project>
