@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d760533-ed4b-410f-8c7d-ef9ba6930a36" name="Changes" comment="feat: add BullMQ job and worker">
-      <change afterPath="$PROJECT_DIR$/src/server/api/report/pdf/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eslint.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/eslint.config.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/api/upload.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/api/upload.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/worker/run-worker.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/worker/run-worker.ts" afterDir="false" />
+    <list default="true" id="6d760533-ed4b-410f-8c7d-ef9ba6930a36" name="Changes" comment="feat: implement pdf stream generating">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +114,7 @@
       <workItem from="1756213024453" duration="781000" />
       <workItem from="1756214135994" duration="147000" />
       <workItem from="1756214392900" duration="29000" />
-      <workItem from="1756214429912" duration="5341000" />
+      <workItem from="1756214429912" duration="5655000" />
     </task>
     <task id="LOCAL-00001" summary="feat: initial commit">
       <option name="closed" value="true" />
@@ -175,7 +172,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756227098219</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat: implement pdf stream generating">
+      <option name="closed" value="true" />
+      <created>1756227939589</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1756227939589</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,6 +192,7 @@
     <MESSAGE value="feat: add ML/probability logic" />
     <MESSAGE value="feat: add Redis/BullMQ queueing" />
     <MESSAGE value="feat: add BullMQ job and worker" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add BullMQ job and worker" />
+    <MESSAGE value="feat: implement pdf stream generating" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: implement pdf stream generating" />
   </component>
 </project>

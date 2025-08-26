@@ -37,7 +37,7 @@ const worker = new Worker<UploadBody>('analysisQueue', async ({ data }) => {
     } catch (err) {
         logger.error('Worker failed: ' + (err as Error)?.stack || err);
         // mark failed
-        await prisma.analysis.updateMany({ where: { inputHash: data.inputHash }, data: { status: 'failed' } }).catch(()=>{});
+        await prisma.analysis.updateMany({ where: { inputHash: data.inputHash }, data: { status: 'failed' } });
         throw err;
     }
 }, { connection });
