@@ -4,8 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d760533-ed4b-410f-8c7d-ef9ba6930a36" name="Changes" comment="fix: gitignore">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="6d760533-ed4b-410f-8c7d-ef9ba6930a36" name="Changes" comment="fix: readme.md">
+      <change afterPath="$PROJECT_DIR$/src/app/old/globals.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/old/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/reset.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Providers.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/consts/links.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/queryClient.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/old/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/old/page.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/old/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
+        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
       </list>
     </option>
@@ -52,36 +67,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.11.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.11.30&quot;,
-    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
-    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/affanzukic/web/event-scheduling-analysis&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/affanzukic/web/event-scheduling-analysis/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "javascript.nodejs.core.library.configured.version": "20.11.0",
+    "javascript.nodejs.core.library.typings.version": "20.11.30",
+    "js.debugger.nextJs.config.created.client": "true",
+    "js.debugger.nextJs.config.created.server": "true",
+    "last_opened_file_path": "/Users/affanzukic/web/event-scheduling-analysis",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "pnpm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "ts.external.directory.path": "/Users/affanzukic/web/event-scheduling-analysis/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="es6.move.members.recent.items">
       <recent name="$PROJECT_DIR$/src/lib/redis.ts" />
       <recent name="$PROJECT_DIR$/src/utils/url.ts" />
       <recent name="$PROJECT_DIR$/src/types/event.ts" />
       <recent name="$PROJECT_DIR$/src/types/training.ts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/app/old" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Next.js: server-side">
@@ -118,7 +138,7 @@
       <workItem from="1756213024453" duration="781000" />
       <workItem from="1756214135994" duration="147000" />
       <workItem from="1756214392900" duration="29000" />
-      <workItem from="1756214429912" duration="7259000" />
+      <workItem from="1756214429912" duration="8629000" />
     </task>
     <task id="LOCAL-00001" summary="feat: initial commit">
       <option name="closed" value="true" />
@@ -232,7 +252,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756229314858</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="fix: readme.md">
+      <option name="closed" value="true" />
+      <created>1756229632964</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1756229632964</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,6 +278,7 @@
     <MESSAGE value="fix: Redis/BullMQ connection options" />
     <MESSAGE value="fix: redis/bullmq connection options" />
     <MESSAGE value="fix: gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: gitignore" />
+    <MESSAGE value="fix: readme.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: readme.md" />
   </component>
 </project>

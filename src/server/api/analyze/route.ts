@@ -7,23 +7,23 @@ import { EventsArraySchema, HolidaysSchema, TrainingSchema } from '@/lib/validat
 import { UploadBody } from '@/types/api/upload';
 
 export async function POST(req: Request) {
-    const body = await req.json() as UploadBody;
-    const events = EventsArraySchema.parse(body.events || []);
-    const holidays = body.holidays ? HolidaysSchema.parse(body.holidays) : [];
-    const training = body.training ? TrainingSchema.parse(body.training) : [];
-    const year = body.year || new Date().getFullYear();
-    const rangeFrom = body.rangeFrom ?? null;
-    const rangeTo = body.rangeTo ?? null;
-    const scoreCfg = body.scoreCfg ?? null;
+  const body = await req.json() as UploadBody;
+  const events = EventsArraySchema.parse(body.events || []);
+  const holidays = body.holidays ? HolidaysSchema.parse(body.holidays) : [];
+  const training = body.training ? TrainingSchema.parse(body.training) : [];
+  const year = body.year || new Date().getFullYear();
+  const rangeFrom = body.rangeFrom ?? null;
+  const rangeTo = body.rangeTo ?? null;
+  const scoreCfg = body.scoreCfg ?? null;
 
-    const inputHash = hashString(JSON.stringify({ events, holidays }));
+  const inputHash = hashString(JSON.stringify({ events, holidays }));
 
-    // Check cache
-    const existing = await prisma.analysis.findUnique({ where: { inputHash } });
-    if (existing) return NextResponse.json({ cached: true, id: existing.id, result: existing.resultJson });
+  // Check cache
+  const existing = await prisma.analysis.findUnique({ where: { inputHash } });
+  if (existing) return NextResponse.json({ cached: true, id: existing.id, result: existing.resultJson });
 
-    // Enqueue
-    const job = await queue.add('runAnalysis', { events, holidays, training, year, rangeFrom, rangeTo, scoreCfg, inputHash }, { attempts: 3, backoff: { type: 'exponential', delay: 1000 } });
+  // Enqueue
+  const job = await queue.add('runAnalysis', { events, holidays, training, year, rangeFrom, rangeTo, scoreCfg, inputHash }, { attempts: 3, backoff: { type: 'exponential', delay: 1000 } });
 
-    return NextResponse.json({ enqueued: true, jobId: job.id });
+  return NextResponse.json({ enqueued: true, jobId: job.id });
 }
