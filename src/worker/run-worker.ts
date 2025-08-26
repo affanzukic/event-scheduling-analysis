@@ -1,19 +1,16 @@
 import 'dotenv/config';
 
 import { Worker } from 'bullmq';
-import IORedis from 'ioredis';
 
 import { DEFAULTS_SCORING } from '@/consts/scoring';
-import { ENV } from '@/env';
 import { trainHeadlinerModel } from '@/lib/analysis/headlinerModel';
 import { buildDistributions } from '@/lib/analysis/probability';
 import { computeScores } from '@/lib/analysis/scoring';
 import { generateCandidateDates } from '@/lib/dateUtils';
 import { logger } from '@/lib/logger';
 import { prisma } from '@/lib/prisma';
+import { workerConnection } from '@/lib/redis';
 import { UploadBody } from '@/types/api/upload';
-
-const connection = new IORedis(ENV.REDIS_URL);
 
 const worker = new Worker<UploadBody>('analysisQueue', async ({ data }) => {
     try {
@@ -40,7 +37,7 @@ const worker = new Worker<UploadBody>('analysisQueue', async ({ data }) => {
         await prisma.analysis.updateMany({ where: { inputHash: data.inputHash }, data: { status: 'failed' } });
         throw err;
     }
-}, { connection });
+}, { connection: workerConnection });
 
 worker.on('completed', job => logger.info('Job completed: ' + job.id));
 worker.on('failed', (job, err) => logger.error('Job failed: ' + job?.id + ' error: ' + String(err)));
