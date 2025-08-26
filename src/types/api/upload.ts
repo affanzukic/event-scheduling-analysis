@@ -1,5 +1,6 @@
 import { z } from 'zod';
 
+import { ScoringConfig } from '@/consts/scoring';
 import { EventsArraySchema, HolidaysSchema, TrainingSchema } from '@/lib/validator';
 
 export type UploadBody = {
@@ -9,5 +10,6 @@ export type UploadBody = {
   year?: number;
   rangeFrom?: string | null;
   rangeTo?: string | null;
-  scoreCfg?: Record<string, any> | null;
+  scoreCfg?: ScoringConfig | null;
+  inputHash?: string;
 }

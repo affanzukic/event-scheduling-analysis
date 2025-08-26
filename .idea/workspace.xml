@@ -4,20 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d760533-ed4b-410f-8c7d-ef9ba6930a36" name="Changes" comment="feat: add ML/probability logic">
-      <change afterPath="$PROJECT_DIR$/src/env.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/queue.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/report/pdfGenerator.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/api/analyze/route.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/api/upload/route.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/api/upload.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/url.ts" afterDir="false" />
+    <list default="true" id="6d760533-ed4b-410f-8c7d-ef9ba6930a36" name="Changes" comment="feat: add Redis/BullMQ queueing">
+      <change afterPath="$PROJECT_DIR$/src/worker/run-worker.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eslint.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/eslint.config.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-workspace.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-workspace.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/consts/scoring.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/consts/scoring.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/analysis/scoring.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/analysis/scoring.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/event.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/event.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/api/upload.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/api/upload.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +121,7 @@
       <workItem from="1756213024453" duration="781000" />
       <workItem from="1756214135994" duration="147000" />
       <workItem from="1756214392900" duration="29000" />
-      <workItem from="1756214429912" duration="3983000" />
+      <workItem from="1756214429912" duration="4726000" />
     </task>
     <task id="LOCAL-00001" summary="feat: initial commit">
       <option name="closed" value="true" />
@@ -152,7 +147,31 @@
       <option name="project" value="LOCAL" />
       <updated>1756224563006</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: add Redis/BullMQ queueing">
+      <option name="closed" value="true" />
+      <created>1756226333722</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1756226333722</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: add Redis/BullMQ queueing">
+      <option name="closed" value="true" />
+      <created>1756226366976</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1756226366976</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: add Redis/BullMQ queueing">
+      <option name="closed" value="true" />
+      <created>1756226380046</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1756226380046</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,6 +181,7 @@
     <MESSAGE value="feat: initial commit" />
     <MESSAGE value="feat: add zod/prisma and libs" />
     <MESSAGE value="feat: add ML/probability logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add ML/probability logic" />
+    <MESSAGE value="feat: add Redis/BullMQ queueing" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add Redis/BullMQ queueing" />
   </component>
 </project>

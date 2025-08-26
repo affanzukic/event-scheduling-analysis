@@ -2,30 +2,30 @@ import { FlatCompat } from '@eslint/eslintrc';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 
 const compat = new FlatCompat({
-  baseDirectory: import.meta.dirname,
+    baseDirectory: import.meta.dirname,
 });
 
 const eslintConfig = [
-  ...compat.config({
-    extends: ['next', 'prettier'],
-  }),
-  {
-    ignores: ['node_modules/**', '.next/**', 'out/**', 'build/**', 'next-env.d.ts'],
-    plugins: {
-      'simple-import-sort': simpleImportSort,
+    ...compat.config({
+        extends: ['next', 'prettier'],
+    }),
+    {
+        ignores: ['node_modules/**', '.next/**', 'out/**', 'build/**', 'next-env.d.ts'],
+        plugins: {
+            'simple-import-sort': simpleImportSort,
+        },
+        rules: {
+            'simple-import-sort/imports': 'warn',
+            'simple-import-sort/exports': 'warn',
+
+            indent: 'error',
+            '@typescript-eslint/indent': 'off',
+
+            'no-unused-vars': 'error',
+
+            'no-empty': ['error', { allowEmptyCatch: true }],
+        },
     },
-    rules: {
-      'simple-import-sort/imports': 'warn',
-      'simple-import-sort/exports': 'warn',
-
-      indent: 'off',
-      '@typescript-eslint/indent': 'off',
-
-      'no-unused-vars': 'off',
-
-      'no-empty': ['error', { allowEmptyCatch: true }],
-    },
-  },
 ];
 
 export default eslintConfig;
