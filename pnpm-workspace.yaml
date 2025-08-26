@@ -1,6 +1,9 @@
 onlyBuiltDependencies:
   - '@prisma/client'
   - '@prisma/engines'
+  - '@tensorflow/tfjs-node'
+  - canvas
+  - core-js
   - prisma
   - sharp
   - unrs-resolver

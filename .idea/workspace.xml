@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d760533-ed4b-410f-8c7d-ef9ba6930a36" name="Changes" comment="feat: initial commit">
-      <change afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/prisma.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="6d760533-ed4b-410f-8c7d-ef9ba6930a36" name="Changes" comment="feat: add zod/prisma and libs">
+      <change afterPath="$PROJECT_DIR$/src/consts/scoring.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/analysis/headlinerModel.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/analysis/probability.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/analysis/scoring.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/event.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/probability.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/training.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
@@ -40,6 +44,10 @@
     &quot;accountId&quot;: &quot;c691ac31-5b4b-4850-92ff-114aee640d0d&quot;
   }
 }</component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -75,6 +83,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="es6.move.members.recent.items">
+      <recent name="$PROJECT_DIR$/src/types/training.ts" />
+    </key>
+  </component>
   <component name="RunManager" selected="npm.Next.js: server-side">
     <configuration name="Next.js: debug client-side" type="JavascriptDebugType" uri="http://localhost:3000/">
       <method v="2" />
@@ -109,7 +122,7 @@
       <workItem from="1756213024453" duration="781000" />
       <workItem from="1756214135994" duration="147000" />
       <workItem from="1756214392900" duration="29000" />
-      <workItem from="1756214429912" duration="31000" />
+      <workItem from="1756214429912" duration="1468000" />
     </task>
     <task id="LOCAL-00001" summary="feat: initial commit">
       <option name="closed" value="true" />
@@ -119,7 +132,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756213036985</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: add zod/prisma and libs">
+      <option name="closed" value="true" />
+      <created>1756214702447</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1756214702447</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,6 +148,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: initial commit" />
+    <MESSAGE value="feat: add zod/prisma and libs" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add zod/prisma and libs" />
   </component>
 </project>
