@@ -4,6 +4,7 @@ onlyBuiltDependencies:
   - '@tensorflow/tfjs-node'
   - canvas
   - core-js
+  - msgpackr-extract
   - prisma
   - sharp
   - unrs-resolver

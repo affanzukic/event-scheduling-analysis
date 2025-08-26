@@ -1,17 +1,9 @@
 import { DEFAULTS_SCORING } from '@/consts/scoring';
 import { scoreHeadliner } from '@/lib/analysis/headlinerModel';
 import { dateProbability } from '@/lib/analysis/probability';
-import { Event } from '@/types/event';
+import { Event, ScoringOutput } from '@/types/event';
 import { Distributions } from '@/types/probability';
 import { HeadlinerModel } from '@/types/training';
-
-type ScoringOutput = {
-  date: string;
-  venue: string;
-  score: number;
-  dateProb: number;
-  venueProb: number;
-}
 
 export const scoreDateVenue = (dateISO: string, venue: string, events: Event[], dists: Distributions, headModel: HeadlinerModel, cfg = DEFAULTS_SCORING) =>{
   const cDate = new Date(dateISO);
