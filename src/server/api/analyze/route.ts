@@ -2,9 +2,9 @@ import { NextResponse } from 'next/server';
 
 import { hashString } from '@/lib/hash';
 import { prisma } from '@/lib/prisma';
+import { queue } from '@/lib/redis';
 import { EventsArraySchema, HolidaysSchema, TrainingSchema } from '@/lib/validator';
 import { UploadBody } from '@/types/api/upload';
-import { queue } from '@/lib/redis';
 
 export async function POST(req: Request) {
     const body = await req.json() as UploadBody;
