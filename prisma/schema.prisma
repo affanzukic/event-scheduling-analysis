@@ -1,0 +1,32 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Event {
+  id             Int      @id @default(autoincrement())
+  name           String
+  venue          String
+  date           DateTime
+  headliner      String?
+  weight         Float    @default(1)
+  popularityHint Float?
+  createdAt      DateTime @default(now())
+}
+
+model Analysis {
+  id            Int       @id @default(autoincrement())
+  inputHash     String    @unique
+  eventsCount   Int
+  holidaysCount Int
+  year          Int
+  rangeFrom     DateTime?
+  rangeTo       DateTime?
+  resultJson    Json
+  status        String    @default("done") // queued|processing|done|failed
+  createdAt     DateTime  @default(now())
+}
