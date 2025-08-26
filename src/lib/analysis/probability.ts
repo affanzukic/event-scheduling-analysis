@@ -8,7 +8,7 @@ export const buildDistributions = (events: Event[]): Distributions => {
         dayCounts: new Map<number, number>(),
         weekCounts: new Map<number, number>(),
         venueCounts: new Map<string, number>(),
-    }
+    };
 
     for (const e of events) {
         const m = e.date.getMonth();
@@ -30,11 +30,11 @@ export const buildDistributions = (events: Event[]): Distributions => {
     for (const k of venueCounts.keys()) venueCounts.set(k, (venueCounts.get(k) || 0) / Math.max(1, sumV));
 
     return { monthCounts, dayCounts, weekCounts, venueCounts };
-}
+};
 
 export const dateProbability = (candidate: Date, d: Distributions) =>{
     const m = d.monthCounts.get(candidate.getMonth()) || 0;
     const w = d.weekCounts.get(getWeekOfMonth(candidate)) || 0;
     const day = d.dayCounts.get(candidate.getDay()) || 0;
     return m * 0.5 + w * 0.3 + day * 0.2;
-}
+};

@@ -7,7 +7,7 @@ import { HeadlinerModel } from '@/types/training';
 
 export const scoreDateVenue = (dateISO: string, venue: string, events: Event[], dists: Distributions, headModel: HeadlinerModel, cfg = DEFAULTS_SCORING) =>{
     const cDate = new Date(dateISO);
-    if (events.some(e => e.venue === venue && e.date.toISOString().split("T")[0] === dateISO)) return 0;
+    if (events.some(e => e.venue === venue && e.date.toISOString().split('T')[0] === dateISO)) return 0;
     let score = 100;
     for (const e of events) {
         const diff = Math.abs((e.date.getTime() - cDate.getTime()) / 86400000);
@@ -33,7 +33,7 @@ export const scoreDateVenue = (dateISO: string, venue: string, events: Event[], 
     }
     score -= maxH * cfg.headlinerWeight;
     return Math.max(0, score);
-}
+};
 
 export const computeScores = (candidates: string[], venues: string[], events: Event[], dists: Distributions, headModel: HeadlinerModel, cfg?: ScoringConfig) => {
     const out: ScoringOutput[] = [];
@@ -48,4 +48,4 @@ export const computeScores = (candidates: string[], venues: string[], events: Ev
     }
     out.sort((a, b) => b.score - a.score);
     return { all: out, top5: out.slice(0, 5) };
-}
+};

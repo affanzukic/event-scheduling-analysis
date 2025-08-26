@@ -1,4 +1,4 @@
-import * as tf from "@tensorflow/tfjs-node";
+import * as tf from '@tensorflow/tfjs-node';
 
 import { getWeekOfMonth } from '@/lib/dateUtils';
 import { Training } from '@/types/probability';
@@ -33,15 +33,15 @@ export const trainHeadlinerModel = async (training: Training[]): Promise<Headlin
     const y = tf.tensor2d(ys, [ys.length, 1]);
 
     const model = tf.sequential();
-    model.add(tf.layers.dense({ units: 16, activation: "relu", inputShape: [5] }));
-    model.add(tf.layers.dense({ units: 8, activation: "relu" }));
-    model.add(tf.layers.dense({ units: 1, activation: "sigmoid" }));
-    model.compile({ optimizer: tf.train.adam(0.01), loss: "meanSquaredError" });
+    model.add(tf.layers.dense({ units: 16, activation: 'relu', inputShape: [5] }));
+    model.add(tf.layers.dense({ units: 8, activation: 'relu' }));
+    model.add(tf.layers.dense({ units: 1, activation: 'sigmoid' }));
+    model.compile({ optimizer: tf.train.adam(0.01), loss: 'meanSquaredError' });
 
     await model.fit(x, y, { epochs: 60, verbose: 0 });
     x.dispose(); y.dispose();
     return { model, fallback, globalAvg };
-}
+};
 
 export const scoreHeadliner = (date: Date, m: HeadlinerModel, headliner?: string) =>{
     if (!headliner) return 0;
@@ -55,4 +55,4 @@ export const scoreHeadliner = (date: Date, m: HeadlinerModel, headliner?: string
         return Math.max(0, Math.min(1, val));
     }
     return Math.max(0, Math.min(1, hint));
-}
+};

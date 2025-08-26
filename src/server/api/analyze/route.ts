@@ -23,7 +23,7 @@ export async function POST(req: Request) {
     if (existing) return NextResponse.json({ cached: true, id: existing.id, result: existing.resultJson });
 
     // Enqueue
-    const job = await queue.add("runAnalysis", { events, holidays, training, year, rangeFrom, rangeTo, scoreCfg, inputHash }, { attempts: 3, backoff: { type: "exponential", delay: 1000 } });
+    const job = await queue.add('runAnalysis', { events, holidays, training, year, rangeFrom, rangeTo, scoreCfg, inputHash }, { attempts: 3, backoff: { type: 'exponential', delay: 1000 } });
 
     return NextResponse.json({ enqueued: true, jobId: job.id });
 }

@@ -1,7 +1,7 @@
-import "dotenv/config";
+import 'dotenv/config';
 
 import { Worker } from 'bullmq';
-import IORedis from "ioredis";
+import IORedis from 'ioredis';
 
 import { DEFAULTS_SCORING } from '@/consts/scoring';
 import { ENV } from '@/env';
@@ -15,9 +15,9 @@ import { UploadBody } from '@/types/api/upload';
 
 const connection = new IORedis(ENV.REDIS_URL);
 
-const worker = new Worker<UploadBody>("analysisQueue", async ({ data }) => {
+const worker = new Worker<UploadBody>('analysisQueue', async ({ data }) => {
     try {
-        await prisma.analysis.create({ data: { inputHash: data.inputHash ?? '', eventsCount: data.events?.length ?? 0, holidaysCount: data.holidays?.length ?? 0, year: data.year ?? new Date().getFullYear(), status: "processing", resultJson: {} } });
+        await prisma.analysis.create({ data: { inputHash: data.inputHash ?? '', eventsCount: data.events?.length ?? 0, holidaysCount: data.holidays?.length ?? 0, year: data.year ?? new Date().getFullYear(), status: 'processing', resultJson: {} } });
         // convert events
         const events = (data.events || []).map((e) => ({ ...e, date: new Date(e.date) }));
         const training = data.training || [];
@@ -31,16 +31,16 @@ const worker = new Worker<UploadBody>("analysisQueue", async ({ data }) => {
 
         const result = { year: data.year, all, top5, meta: { eventsCount: events.length, holidaysCount: (data.holidays || []).length, timestamp: new Date().toISOString() } };
 
-        await prisma.analysis.update({ where: { inputHash: data.inputHash }, data: { resultJson: result, status: "done" } });
+        await prisma.analysis.update({ where: { inputHash: data.inputHash }, data: { resultJson: result, status: 'done' } });
 
         return { ok: true, id: data.inputHash };
     } catch (err) {
-        logger.error("Worker failed: " + (err as Error)?.stack || err);
+        logger.error('Worker failed: ' + (err as Error)?.stack || err);
         // mark failed
-        await prisma.analysis.updateMany({ where: { inputHash: data.inputHash }, data: { status: "failed" } }).catch(()=>{});
+        await prisma.analysis.updateMany({ where: { inputHash: data.inputHash }, data: { status: 'failed' } }).catch(()=>{});
         throw err;
     }
 }, { connection });
 
-worker.on("completed", job => logger.info("Job completed: " + job.id));
-worker.on("failed", (job, err) => logger.error("Job failed: " + job?.id + " error: " + String(err)));
+worker.on('completed', job => logger.info('Job completed: ' + job.id));
+worker.on('failed', (job, err) => logger.error('Job failed: ' + job?.id + ' error: ' + String(err)));

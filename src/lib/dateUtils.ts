@@ -1,10 +1,10 @@
-export const formatDateYMD = (d: Date) => d.toISOString().split("T")[0];
+export const formatDateYMD = (d: Date) => d.toISOString().split('T')[0];
 
 export const getWeekOfMonth = (date: Date) => {
     const first = new Date(date.getFullYear(), date.getMonth(), 1);
     const offset = ((first.getDay() || 7) - 1);
     return Math.ceil((date.getDate() + offset) / 7);
-}
+};
 
 export const generateCandidateDates = (year: number, holidays?: Set<string> | null, rangeFrom?: Date | null, rangeTo?: Date | null) => {
     const start = new Date(year, 0, 1);
@@ -18,4 +18,4 @@ export const generateCandidateDates = (year: number, holidays?: Set<string> | nu
         if ((dow === 5 || dow === 6) && (!holidays || !holidays.has(iso))) out.push(iso);
     }
     return out;
-}
+};

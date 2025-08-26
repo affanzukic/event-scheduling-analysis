@@ -22,6 +22,8 @@ const eslintConfig = [
             '@typescript-eslint/indent': 'off',
 
             'no-unused-vars': 'error',
+            'semi': ['error', 'always'],
+            'quotes': ['error', 'single'],
 
             'no-empty': ['error', { allowEmptyCatch: true }],
         },
